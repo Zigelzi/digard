@@ -7,7 +7,9 @@
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "eslint-plugin-gridsome": "^1.4.13",
     "gridsome": "^0.7.0",
+    "gridsome-helper-json": "^1.0.3",
     "gridsome-source-sanity": "^1.0.5"
   },
   "devDependencies": {

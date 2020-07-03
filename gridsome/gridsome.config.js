@@ -11,10 +11,10 @@ module.exports = {
       use: 'gridsome-source-sanity',
       options: {
         projectId: 'xu91v1jl',
-        dataset: 'production',
+        dataset: 'digital_garden',
         // Token is only required if dataset is private
         // or `overlayDrafts` is set to true
-        token: '<tokenWithReadRights>',
+        token: process.env.SANITY_AUTH_TOKEN,
         overlayDrafts: false,
         watchMode: false,
 
