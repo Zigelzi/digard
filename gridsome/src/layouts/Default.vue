@@ -1,11 +1,6 @@
 <template>
-  <div class="layout">
-    <header class="header">
-      <nav>
-        <g-link>Test</g-link>
-      </nav>
-    </header>
-    <slot />
+  <div id="content">
+    <slot></slot>
   </div>
 </template>
 
@@ -17,4 +12,7 @@ query {
 }
 </static-query>
 
-<style></style>
+<style lang="scss"></style>
+<script>
+export default {}
+</script>
