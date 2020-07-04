@@ -49,27 +49,33 @@ export default {
       interests: [
         {
           title: 'Digital Photography',
-          description: '',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum sapien quis justo tincidunt interdum. ',
         },
         {
           title: 'Video Games',
-          description: '',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum sapien quis justo tincidunt interdum.',
         },
         {
           title: 'Cooking',
-          description: '',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum sapien quis justo tincidunt interdum.',
         },
         {
-          title: 'Excersizing',
-          description: '',
+          title: 'Exersizing',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum sapien quis justo tincidunt interdum.',
         },
         {
           title: 'Digital Products',
-          description: '',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum sapien quis justo tincidunt interdum.',
         },
         {
           title: 'Web Development',
-          description: '',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vestibulum sapien quis justo tincidunt interdum.',
         },
       ],
     }
