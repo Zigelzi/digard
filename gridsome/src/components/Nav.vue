@@ -1,13 +1,35 @@
 <template>
-  <div class="nav-overlay">
-    <nav class="nav">
-      <g-link class="nav__link mg-h-s" to="/">Home</g-link>
-      <g-link class="nav__link mg-h-s" to="/">The Lab</g-link>
-      <g-link class="nav__link mg-h-s" to="/">Photography</g-link>
-    </nav>
-    <MenuIcon class="nav-icon" />
+  <div>
+    <div class="nav-overlay" v-if="navVisible">
+      <nav class="nav">
+        <g-link class="nav__link mg-h-s" to="/">Home</g-link>
+        <g-link class="nav__link mg-h-s" to="/">The Lab</g-link>
+        <g-link class="nav__link mg-h-s" to="/">Photography</g-link>
+      </nav>
+    </div>
+    <MenuIcon class="nav-icon" @click="toggleNav" />
   </div>
 </template>
+
+<script>
+import MenuIcon from '@/components/MenuIcon'
+export default {
+  components: {
+    MenuIcon,
+  },
+  data() {
+    return {
+      navVisible: false,
+    }
+  },
+  methods: {
+    toggleNav() {
+      console.log('Clicked!')
+      this.navVisible = !this.navVisible
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 .nav-overlay {
@@ -37,17 +59,8 @@
 }
 
 .nav-icon {
-  position: absolute;
+  position: fixed;
   bottom: 20px;
   right: 20px;
 }
 </style>
-
-<script>
-import MenuIcon from '@/components/MenuIcon'
-export default {
-  components: {
-    MenuIcon,
-  },
-}
-</script>

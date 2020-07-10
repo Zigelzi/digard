@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-menu">
+  <div class="icon-menu" @click="test">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       height="50"
@@ -18,6 +18,16 @@
     </svg>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    test() {
+      console.log('CLicked')
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 .icon-menu {
