@@ -8,11 +8,11 @@
           the internet that I take care of.
         </p>
       </div>
-      <div class="landing-right landing-block">
+      <!-- <div class="landing-right landing-block">
         <div>
           <g-image class="framed-image" src="@/assets/img/garden.jpg" />
         </div>
-      </div>
+      </div> -->
     </section>
     <section class="main-content">
       <div>
