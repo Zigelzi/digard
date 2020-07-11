@@ -20,6 +20,11 @@ export default {
   margin-right: 15px;
   margin-bottom: 15px;
   box-shadow: 0 5px 5px 5px rgba(75, 75, 75, 0.1);
+  transition: all 1s ease;
+
+  &:hover {
+    background: white;
+  }
 
   h1 {
     font-weight: 400;

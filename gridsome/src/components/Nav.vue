@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div class="nav-overlay" v-if="navVisible">
+    <div class="nav-overlay" v-if="navOpen">
       <nav class="nav">
         <g-link class="nav__link mg-h-s" to="/">Home</g-link>
         <g-link class="nav__link mg-h-s" to="/">The Lab</g-link>
         <g-link class="nav__link mg-h-s" to="/">Photography</g-link>
       </nav>
     </div>
-    <MenuIcon class="nav-icon" @click="toggleNav" />
+    <MenuIcon
+      class="nav-icon"
+      @menuIconClicked="toggleNav"
+      :navOpen="navOpen"
+    />
   </div>
 </template>
 
@@ -19,13 +23,13 @@ export default {
   },
   data() {
     return {
-      navVisible: false,
+      navOpen: false,
     }
   },
   methods: {
     toggleNav() {
       console.log('Clicked!')
-      this.navVisible = !this.navVisible
+      this.navOpen = !this.navOpen
     },
   },
 }
@@ -33,7 +37,7 @@ export default {
 
 <style lang="scss">
 .nav-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;

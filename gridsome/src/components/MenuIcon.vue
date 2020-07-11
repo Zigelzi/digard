@@ -1,37 +1,90 @@
 <template>
-  <div class="icon-menu" @click="test">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="50"
-      width="50"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      class="feather feather-menu"
-    >
-      <line x1="3" y1="12" x2="21" y2="12"></line>
-      <line x1="3" y1="6" x2="21" y2="6"></line>
-      <line x1="3" y1="18" x2="21" y2="18"></line>
-    </svg>
+  <div
+    class="icon-menu"
+    @click="test"
+    :class="{ 'hamburger-menu__open': navOpen }"
+  >
+    <div class="hamburger-menu"></div>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    navOpen: Boolean,
+  },
   methods: {
     test() {
-      console.log('CLicked')
+      console.log(`navOpen is ${this.navOpen}`)
+      this.$emit('menuIconClicked')
+    },
+  },
+  computed: {
+    classObject() {
+      return {
+        //eslint-disable-next-line
+        'hamburger-menu__open': this.navOpen,
+      }
     },
   },
 }
 </script>
 
 <style lang="scss">
+.hamburger-menu {
+  height: 6px;
+  width: 50px;
+  background: var(--secondary-navy);
+  border-radius: 2px;
+
+  transition: all 0.3s ease;
+
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 6px;
+    width: 50px;
+    background: var(--secondary-navy);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+
+    // transform-origin: left;
+  }
+
+  &::before {
+    transform: translateY(-16px);
+  }
+
+  &::after {
+    transform: translateY(16px);
+  }
+}
+
 .icon-menu {
   display: inline-block;
-  // border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger-menu__open {
+  .hamburger-menu {
+    // transform: translateX(50px);
+    height: 0;
+    width: 0;
+    background: transparent;
+
+    &::before {
+      transform: rotate(45deg) translate(-16px, 16px);
+    }
+
+    &::after {
+      transform: rotate(-45deg) translate(-16px, -16px);
+    }
+  }
 }
 </style>
