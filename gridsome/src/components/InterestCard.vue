@@ -1,5 +1,10 @@
 <template>
   <div class="interest-card">
+    <img
+      class="icon-interest"
+      :src="interest.icon_filename"
+      :alt="'Icon for ' + interest.title"
+    />
     <h1>{{ interest.title }}</h1>
     <p>{{ interest.description }}</p>
   </div>
@@ -19,7 +24,6 @@ export default {
   padding: 5px 20px;
   margin-right: 15px;
   margin-bottom: 15px;
-  box-shadow: 0 5px 5px 5px rgba(75, 75, 75, 0.1);
   transition: all 1s ease;
 
   &:hover {
@@ -30,5 +34,11 @@ export default {
     font-weight: 400;
     font-size: 20px;
   }
+}
+
+.icon-interest {
+  // height: 50px;
+  width: 50px;
+  stroke: white;
 }
 </style>
