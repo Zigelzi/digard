@@ -1,18 +1,14 @@
 <template>
   <Layout>
     <section id="landing-screen">
-      <div class="landing-left landing-block">
-        <h1>Welcome to my Digital Garden!</h1>
-        <p>
-          I'm Miika Savela and this is my digital garden. It's my small plot in
-          the internet that I take care of.
-        </p>
-      </div>
-      <!-- <div class="landing-right landing-block">
-        <div>
-          <g-image class="framed-image" src="@/assets/img/garden.jpg" />
+      <div class="landing-overlay"></div>
+      <div class="landing-header landing-block mg-m">
+        <h1>Digital Garden</h1>
+        <div class="landing-name">
+          <h2 class="landing-firstname mg-0 mg-v-s">Miika</h2>
+          <h2 class="landing-lastname mg-0">Savela</h2>
         </div>
-      </div> -->
+      </div>
     </section>
     <section class="main-content">
       <div>
@@ -86,36 +82,48 @@ export default {
 <style lang="scss">
 #landing-screen {
   display: flex;
-  height: 60vh;
+  height: 100vh;
   width: 100vw;
-}
-.landing-block {
-  flex-basis: 50%;
+  background: url('/garden.jpg');
+  background-size: cover;
 }
 
-.landing-left {
+.landing-overlay {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(75, 75, 75, 0.2);
+}
+
+.landing-header {
   display: flex;
-  flex-direction: column;
-  padding-left: 20px;
+  flex-direction: column-reverse;
+  color: white;
 
   h1 {
     margin-top: 10%;
   }
 }
 
-.framed-image {
-  width: 250px;
-  margin-top: 20px;
-  margin-left: 50px;
-  padding: 10px;
-  border: 3px solid black;
-  transform: rotateZ(7deg);
+.landing-name {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: -60px;
+  top: 70%;
+}
+
+.landing-firstname,
+.landing-lastname {
+  display: inline-block;
 }
 
 .main-content {
   margin: 0 auto;
   width: 90%;
   max-width: var(--content-max-width);
+  position: relative;
 }
 
 #interests-section {

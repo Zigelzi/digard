@@ -43,6 +43,7 @@ export default {
   width: 100vw;
   height: 100vh;
   background: rgba(200, 200, 200, 0.9);
+  z-index: 98;
 }
 
 .nav {
@@ -66,5 +67,6 @@ export default {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  z-index: 99;
 }
 </style>
