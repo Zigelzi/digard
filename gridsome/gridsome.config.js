@@ -6,6 +6,8 @@
 
 module.exports = {
   siteName: 'Digital Garden',
+  siteUrl: 'https://zigelzi.github.io/',
+  pathPrefix: '/digard',
   plugins: [
     {
       use: 'gridsome-source-sanity',
