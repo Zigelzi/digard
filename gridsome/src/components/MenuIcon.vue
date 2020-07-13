@@ -34,7 +34,7 @@ export default {
 .hamburger-menu {
   height: 6px;
   width: 50px;
-  background: var(--secondary-navy);
+  background: var(--secondary-blue-500);
   border-radius: 2px;
 
   transition: all 0.3s ease;
@@ -46,7 +46,7 @@ export default {
     position: absolute;
     height: 6px;
     width: 50px;
-    background: var(--secondary-navy);
+    background: var(--secondary-blue-500);
     border-radius: 2px;
     transition: all 0.3s ease;
 
@@ -69,6 +69,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .hamburger-menu__open {

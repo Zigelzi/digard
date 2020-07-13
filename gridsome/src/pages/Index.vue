@@ -14,30 +14,68 @@
     </section>
     <section class="main-content">
       <div>
-        <h2>What is Digital <span class="highlight-green">Garden</span>?</h2>
+        <h2>What is Digital <span class="highlight-blue">Garden</span>?</h2>
         <p>
           As the name implies, it's digital equivalent of garden for me. Instead
           of plants, I take care of my digital hobbies and share thoughts
           surrounding the topics that interest me.
         </p>
       </div>
-      <div id="interests-section">
+      <section id="interests-section">
         <InterestCard
           v-for="(interest, index) in interests"
           :key="index"
           :interest="interest"
         />
-      </div>
+      </section>
+      <section id="how-its-made">
+        <div>
+          <h3>How it's made</h3>
+          <p>
+            This garden is built by usinging
+            <a href="https://jamstack.org/">JAMstack</a>.
+          </p>
+        </div>
+        <div>
+          <h3>Building bricks</h3>
+          <Brick>
+            <img
+              src="logo_gridsome_text.svg"
+              alt="Gridsome logo"
+              class="logo-m logo-img"
+            />
+            <p>
+              Gridsome is Vue based static site generator inspired by Gatsby
+            </p>
+          </Brick>
+          <Brick>
+            <img
+              src="logo_sanity.png"
+              alt="Gridsome logo"
+              class="logo-m logo-img"
+            />
+            <p>
+              Sanity is Headless CMS providing combining great customisability
+              and ease of use
+            </p>
+          </Brick>
+        </div>
+      </section>
     </section>
+    <Footer />
   </Layout>
 </template>
 
 <script>
 import InterestCard from '@/components/InterestCard'
+import Footer from '@/components/Footer'
+import Brick from '@/components/Brick'
 
 export default {
   components: {
     InterestCard,
+    Footer,
+    Brick,
   },
   metaInfo: {
     title: 'Index',
@@ -153,6 +191,7 @@ export default {
   width: 90%;
   max-width: var(--content-max-width);
   position: relative;
+  margin-bottom: 80px;
 }
 
 #interests-section {

@@ -6,9 +6,9 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--secondary-navy);
+    color: var(--secondary-blue-500);
 
-    transition: color, .2s, ease-in-out;
+    transition: color, .25s;
 
     &:hover {
         color: var(--secondary-red);
@@ -21,6 +21,10 @@ a {
 
 .highlight-green {
     color: var(--highlight-green);
+}
+
+.highlight-blue {
+    color: var(--secondary-blue-500);
 }
 
 .text-white {

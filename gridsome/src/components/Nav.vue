@@ -57,6 +57,7 @@ export default {
 
 .nav__link {
   font-size: var(--text-30);
+  color: var(--secondary-blue-700);
 
   &:hover {
     color: var(--secondary-red);
