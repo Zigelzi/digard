@@ -45,7 +45,15 @@
               class="logo-m logo-img"
             />
             <p>
-              Gridsome is Vue based static site generator inspired by Gatsby
+              Gridsome is Vue based static site generator inspired by Gatsby.
+            </p>
+            <a href="http://gridsome.org">Learn more about Gridsome</a>
+            <h3>Why Gridsome?</h3>
+            <p>
+              I chose Gridsome because it's based on Vue which is technology I'm
+              familiar with and wanted to experiment how Static Site Generators
+              differ from Single Page Applications (SPA:s) in terms of speed,
+              developer experience and usability.
             </p>
           </Brick>
           <Brick>
